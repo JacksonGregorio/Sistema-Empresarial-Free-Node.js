@@ -25,7 +25,7 @@ MongoClient.connect(mongoUrl, function(err, db) {
     let today = new Date();
     let todayStr = today.getFullYear() + '-' + (today.getMonth() + 1).toString().padStart(2, '0') + '-' + today.getDate().toString().padStart(2, '0');
 
-    dbo.collection("users").find({birthday: todayStr}).toArray(function(err, result) {
+    dbo.collection("Contatos").find({Ani_Contato: todayStr}).toArray(function(err, result) {
         if (err) throw err;
         result.forEach(function(user) {
             let mailOptions = {
