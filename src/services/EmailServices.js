@@ -9,12 +9,12 @@ const collectionName = contato;
 const nodemailer = require('nodemailer');
 const MongoClient = require('mongodb').MongoClient;
 
-// Configuração do Nodemailer
+
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'seuemail@gmail.com',
-        pass: 'suaPassword'
+        user: 'secret',
+        pass: 'secret'
     }
 });
 
@@ -29,7 +29,7 @@ MongoClient.connect(mongoUrl, function(err, db) {
         if (err) throw err;
         result.forEach(function(user) {
             let mailOptions = {
-                from: 'seuemail@gmail.com',
+                from: 'secret',
                 to: user.email,
                 subject: 'Feliz Aniversário!',
                 text: `Feliz Aniversário, ${user.name}!`
