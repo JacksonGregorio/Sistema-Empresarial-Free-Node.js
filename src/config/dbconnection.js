@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb+srv://jackson:85201200@cluster0.odoujdh.mongodb.net/Colobe");
+mongoose.connect("this is secret");
 
 let db = mongoose.connection;
 
